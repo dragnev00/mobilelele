@@ -9,7 +9,7 @@ import java.time.Year;
 
 @Entity
 @Table(name = "offers")
-public class OfferEntity extends BrandEntity{
+public class OfferEntity extends BaseEntity {
 
     @Column(nullable = false)
     private String description;
@@ -17,7 +17,7 @@ public class OfferEntity extends BrandEntity{
     @Column(nullable = false)
     private EngineEnum engine;
     @Column(name = "image_url",
-    nullable = false)
+            nullable = false)
     private String imageUrl;
     @Column(nullable = false)
     private Integer mileage;
