@@ -12,19 +12,21 @@ public class BrandEntity extends BaseEntity {
     @OneToMany(mappedBy = "brand", cascade = CascadeType.ALL)
     private Set<ModelEntity> models;
 
-    public Set<ModelEntity> getModels() {
-        return models;
-    }
-
-    public void setModels(Set<ModelEntity> models) {
-        this.models = models;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public BrandEntity setName(String name) {
         this.name = name;
+        return this;
+    }
+
+    public Set<ModelEntity> getModels() {
+        return models;
+    }
+
+    public BrandEntity setModels(Set<ModelEntity> models) {
+        this.models = models;
+        return this;
     }
 }
