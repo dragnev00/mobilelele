@@ -27,7 +27,7 @@ public class OfferEntity extends BaseEntity {
     @Column(nullable = false)
     private TransmissionEnum transmission;
     @Column(nullable = false)
-    private Year year;
+    private int year;
     @ManyToOne
     private ModelEntity model;
     @ManyToOne
@@ -87,11 +87,11 @@ public class OfferEntity extends BaseEntity {
         return this;
     }
 
-    public Year getYear() {
+    public int getYear() {
         return year;
     }
 
-    public OfferEntity setYear(Year year) {
+    public OfferEntity setYear(int year) {
         this.year = year;
         return this;
     }

@@ -16,6 +16,8 @@ public class UserEntity extends BaseEntity {
             nullable = false)
     private String lastName;
     @Column(nullable = false)
+    private String password;
+    @Column(nullable = false)
     private boolean isActive;
     @ManyToMany()
     @JoinTable(
@@ -52,6 +54,15 @@ public class UserEntity extends BaseEntity {
 
     public UserEntity setLastName(String lastName) {
         this.lastName = lastName;
+        return this;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public UserEntity setPassword(String password) {
+        this.password = password;
         return this;
     }
 
