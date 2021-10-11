@@ -16,8 +16,7 @@ public class OfferEntity extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private EngineEnum engine;
-    @Column(name = "image_url",
-            nullable = false)
+    @Column(name = "image_url")
     private String imageUrl;
     @Column(nullable = false)
     private Integer mileage;

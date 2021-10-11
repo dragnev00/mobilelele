@@ -1,5 +1,6 @@
 package bg.softuni.mobilelele.service.impl;
 
+import bg.softuni.mobilelele.models.binding.UserLoginBindingModel;
 import bg.softuni.mobilelele.models.entity.UserEntity;
 import bg.softuni.mobilelele.models.entity.UserRoleEntity;
 import bg.softuni.mobilelele.models.entity.enums.UserRoleEnum;
@@ -82,7 +83,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean login(UserLoginServiceModel loginServiceModel) {
+    public boolean login(UserLoginBindingModel loginBindingModel) {
+
+        UserLoginServiceModel loginServiceModel = new UserLoginServiceModel().
+                setUsername(loginBindingModel.getUsername()).
+                setRawPassword(loginBindingModel.getPassword());
+                
         Optional<UserEntity> userEntityOpt =
                 userRepository.findByUsername(loginServiceModel.getUsername());
 

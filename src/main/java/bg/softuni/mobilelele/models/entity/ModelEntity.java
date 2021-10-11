@@ -13,8 +13,7 @@ public class ModelEntity extends BaseEntity {
     private String name;
     @Enumerated(EnumType.STRING)
     private CategoryEnum category;
-    @Column(name = "image_url",
-            nullable = false)
+    @Column(name = "image_url")
     private String imageUrl;
     @Column(name = "start_year",
             nullable = false)
