@@ -1,5 +1,8 @@
 package bg.softuni.mobilelele.models.view;
 
+import bg.softuni.mobilelele.models.entity.enums.EngineEnum;
+import bg.softuni.mobilelele.models.entity.enums.TransmissionEnum;
+
 public class OfferSummaryView {
 
     private long id;
