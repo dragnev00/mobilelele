@@ -33,8 +33,11 @@
                 </li>
             </ul>
             <div class="card-body">
-                <a class="card-link" href="/">Update</a>
-                <a class="card-link" href="/">Delete</a>
+                <a class="card-link" th:href="@{/offers/{id}(id=*{id})}">Update</a>
+
+                <form th:action="@{/offers/{id}(id=*{id})}" th:method="delete">
+                    <input type="submit" class="btn btn-link" value="Delete"/>
+                </form>
             </div>
         </div>
         <div th:object="${offer}"
